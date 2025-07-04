@@ -4,34 +4,34 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("api")
+@RequestMapping("/api")
 public class HelloController {
 
-    @GetMapping("hello")
+    @GetMapping("/hello")
     @ResponseBody
     public  String hello(){
         return "Hello World!";
     }
 
-    @GetMapping("get")
+    @GetMapping("/get")
     @ResponseBody
     public String get(){
         return "Get Method 요청";
     }
 
-    @PostMapping("post")
+    @PostMapping("/post")
     @ResponseBody
     public String post() {
         return "Post Method 요청";
     }
 
-    @PutMapping("put")
+    @PutMapping("/put")
     @ResponseBody
     public String put(){
         return "Put Method 요청";
     }
 
-    @DeleteMapping("delete")
+    @DeleteMapping("/delete")
     @ResponseBody
     public String delete(){
         return "Delete Method 요청";
