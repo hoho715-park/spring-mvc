@@ -14,4 +14,9 @@ public class HelloViewController {
     public String htmlRedirect(){
         return "redirect:/hello.html";
     }
+
+    @GetMapping("/html/templates")
+    public String htmlTemplates(){
+        return "hello-template";
+    }
 }
