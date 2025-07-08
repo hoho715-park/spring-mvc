@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lucia Maigret - Portfolio</title>
+    <title>Park Sung Ho - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato&display=swap" rel="stylesheet">
     <style>
         * {
@@ -15,7 +15,6 @@
             background-color: #f8e6d8;
             font-family: 'Lato', sans-serif;
             color: #111;
-            line-height: 1.6;
         }
 
         .header {
@@ -41,20 +40,31 @@
 
         .hero {
             text-align: center;
-            padding: 60px 20px;
+            padding: 60px 20px 20px 20px;
             font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
+            font-size: 2.2em;
         }
 
+        /* 래퍼: 사진 전체 묶음을 중앙으로 정렬 */
+        .gallery-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        /* 내부 그리드 */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            padding: 40px;
+            grid-template-columns: 300px 250px 150px 150px;
+            grid-template-rows: auto;
+            gap: 20px;
         }
 
         .gallery .item {
+            width: 100%;
+            height: 100%;
             overflow: hidden;
+            border-radius: 8px;
         }
 
         .gallery img {
@@ -64,18 +74,14 @@
             display: block;
         }
 
-        /* 이미지 비율 조정 클래스 */
-        .item.square {
-            aspect-ratio: 1 / 1;
-        }
-
-        .item.tall {
-            aspect-ratio: 3 / 4;
-        }
-
-        .item.wide {
-            aspect-ratio: 4 / 3;
-        }
+        /* 고정 위치 및 크기 */
+        .photo1 { grid-column: 1 / 2; grid-row: 1 / span 2; height: 460px; }
+        .photo2 { grid-column: 2 / 3; grid-row: 1 / 2; height: 220px; }
+        .photo3 { grid-column: 2 / 3; grid-row: 2 / 3; height: 220px; }
+        .photo4 { grid-column: 3 / 4; grid-row: 1 / 2; height: 140px; }
+        .photo5 { grid-column: 3 / 4; grid-row: 2 / 3; height: 140px; }
+        .photo6 { grid-column: 3 / 4; grid-row: 3 / 4; height: 140px; }
+        .photo7 { grid-column: 1 / 3; grid-row: 3 / 4; height: 180px; }
 
         .contact-intro {
             text-align: center;
@@ -96,7 +102,7 @@
 <body>
 
 <header class="header">
-    <h1 class="logo">LUCIA MAIGRET</h1>
+    <h1 class="logo">Park Sung Ho</h1>
     <nav class="nav">
         <a href="#">PROJECTS</a>
         <a href="#">INFO</a>
@@ -109,21 +115,25 @@
     <h2>Full-Stack Developer</h2>
 </section>
 
-<section class="gallery">
-    <div class="item tall"><img src="images/profile.png" alt="Model 1"></div>
-    <div class="item square"><img src="images/profile.png" alt="Model 2"></div>
-    <div class="item tall"><img src="images/profile.png" alt="Model 3"></div>
-    <div class="item wide"><img src="images/profile.png" alt="Model 4"></div>
-    <div class="item square"><img src="images/profile.png" alt="Model 5"></div>
-    <div class="item wide"><img src="images/profile.png" alt="Model 6"></div>
-</section>
+<!-- ✅ 사진 중앙 정렬을 위한 래퍼 추가 -->
+<div class="gallery-wrapper">
+    <section class="gallery">
+        <div class="item photo1"><img src="images/profile.png" alt="사진1"></div>
+        <div class="item photo2"><img src="images/paris.jpg" alt="사진2"></div>
+        <div class="item photo3"><img src="images/paris.jpg" alt="사진3"></div>
+        <div class="item photo4"><img src="images/paris.jpg" alt="사진4"></div>
+        <div class="item photo5"><img src="images/paris.jpg" alt="사진5"></div>
+        <div class="item photo6"><img src="images/paris.jpg" alt="사진6"></div>
+        <div class="item photo7"><img src="images/paris.jpg" alt="사진7"></div>
+    </section>
+</div>
 
 <section class="contact-intro">
     <p>I'd love to hear from you</p>
 </section>
 
 <footer class="footer">
-    <p>© 2025 by Lucia Maigret. Powered and secured by Wix</p>
+    <p>© 2025 by Park Sung Ho. Powered and secured by Wix</p>
 </footer>
 
 </body>
